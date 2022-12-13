@@ -1,0 +1,706 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&display=swap');
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+html { 
+    background-color: rgb(255, 230, 230);
+   
+}
+header{
+    width: 100%;
+    height: 10vh;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: space-between;
+}
+h1{
+    display: flex;
+    align-items: center;
+    font-family: 'Dancing Script', cursive;
+    font-weight: 700;
+    margin-left: 2%;
+    color: rgb(255, 255, 255);
+
+}
+ul{
+    display: flex;
+    align-items: center;
+    margin-right: 10%;
+}
+ul li {
+    list-style-type: none;
+}
+ul li a{
+    text-decoration: none;
+    margin: 0 0 0 30px;
+    font-family: 'Dancing Script', cursive;
+    font-weight: 700;
+    font-size: 1.5em;
+    color: rgb(250, 124, 124);
+    border-bottom: 3px solid rgb(255, 255, 255);
+    padding: 5px;
+}
+ul li a:hover{
+    background-color: rgb(255, 254, 254);
+    color: rgb(250, 124, 124);
+    transition: 0.5;
+    border-radius: 20px;
+}
+#nom{
+ padding: 2%;
+ margin-bottom: 4%;
+ border: 2px solid #000;
+}
+section #form1{
+display: flex;
+flex-direction: column;
+}
+#form1 input{
+    margin-top: 4%;
+    padding: 2%;
+    border: 2px solid #000;
+}
+label{
+    color: rgb(0, 0, 0);
+    font-size: 0.8em;
+}
+#form2{
+    display: flex;
+    margin-top: 5%;
+    margin-left: 5%;
+}
+#form2 input{
+    margin: 0 0 0 10px;
+}
+select{
+    padding: 2%;
+    border: 3px solid #000;
+}
+#select2{
+    margin-top: 4%;
+    border: 3px solid #000;
+}
+section{
+    background: rgba(255, 255, 255, 0.6);
+    box-sizing: border-box;
+    border: 5px solid rgb(0, 0, 0);
+    width: fit-content;
+    height: fit-content;
+    padding: 2%;
+    margin-top: 14%;
+    margin-left: 9%;
+    border-top-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+#text2{
+    margin-top: 3%;
+    font-size: 0.8em;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+}
+#text{
+  color: #000;
+  font-size: 3em;
+  font-family: 'Dancing Script', cursive;
+  font-weight: 700;
+  
+}
+div.titre {
+    width: fit-content;
+    height: fit-content;
+    background: rgba(255, 255, 255, 0.6);
+    padding: 1%;
+    border: 5px solid #000;
+    margin-left: 17%;
+    margin-top: 20.55%;
+    border-top-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+#page{
+    display: flex;
+    flex-direction: row-reverse;
+    margin-right: 22.33%;
+}
+#button{
+    margin-left: 12%;
+    display: flex;
+}
+#button input ,#delete{
+    margin: 0 0 0 10px;
+    padding: 10px;
+    font-size: 0.7em;
+    background-color: rgb(114, 18, 18);
+    color: #fff;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+}
+#button input:hover ,#delete:hover{
+    background-color: #000;
+    color: rgb(250, 124, 124);
+    transition: 0.5;
+    border-radius: 20px;
+}
+label{
+    color: rgb(0, 0, 0);
+}
+h4{
+    color: rgb(0, 0, 0);
+}
+
+table{
+    border-collapse: collapse;
+    margin-top: 5%;
+    margin-left: 9%;
+    margin-bottom: 5%;
+}
+table th{
+    background: rgba(0, 0, 0, 0.6);
+    border: 4px solid rgb(255, 255, 255);
+    padding: 10px;
+    color: #fff;
+    font-size: 0.9em;
+
+}
+table td{
+    background: rgba(83, 83, 83, 0.6);
+    border: 4px solid rgb(255, 250, 250);
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 10px;
+    font-size: 0.7em;
+}
+#btnEdit{
+    display: none;
+}
+
+#delAsk{
+    box-sizing: border-box;
+    background: rgba(255, 255, 255, 0.6);
+    padding: 10px;
+    width: fit-content;
+    height: fit-content;
+    border-radius: 20px;
+    display: none;
+    margin-left: 73%;
+    margin-top: -7%;
+    margin-bottom: 3%;
+}
+#delAsk input{
+    margin-top: 4%;
+    margin-left: 7%;
+}
+
+#warning , #warning2 {
+    box-sizing: border-box;
+    background: rgba(255, 255, 255, 0.6);
+    position: absolute;
+    top: 32%;
+    left: 28%;
+    padding: 2%;
+    width: fit-content;
+    height: fit-content;
+    border: 5px solid #000;
+    border-radius: 30px;
+    display: none;
+}
+#warning3{
+    box-sizing: border-box;
+    background: rgba(255, 255, 255, 0.6);
+    position: absolute;
+    top: 32%;
+    left: 23%;
+    padding: 2%;
+    width: fit-content;
+    height: fit-content;
+    border: 5px solid #000;
+    border-radius: 30px;
+    display: none;
+}
+#warning img{
+    width: 10vw;
+    height: 20vh;
+    margin-left: 34%;
+}
+#warning2 img{
+    width: 10vw;
+    height: 20vh;
+    margin-left: 37%;
+}
+#warning3 img{
+    width: 10vw;
+    height: 20vh;
+    margin-left: 38%;
+}
+#warning p ,#warning2 p{ 
+    font-size: 2em;
+}
+#warning3 p{
+    font-size: 1.5em;
+    margin-top: 1em;
+}
+#warning2 p{
+    margin-top: 2%;
+}
+.btn{
+    margin-top: 6%;
+    margin-left: 22%;
+}
+.btn button{
+    margin: 0 0 0 40px;
+    padding: 10px;
+    font-size: 1.5em;
+    background-color: rgb(114, 18, 18);
+    color: #fff;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+#accept{
+    margin-left: 29%;
+}
+
+#btnAjouter{
+    display: none;
+}
+#save{
+    padding: 10px;
+    font-size: 0.7em;
+    background-color: rgb(114, 18, 18);
+    color: #fff;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+#save:hover{
+    background-color: #000;
+    color: rgb(250, 124, 124);
+    transition: 0.5;
+}
+#accept1{
+    margin-left:28%;
+}
+
+@media only screen and (max-width: 700px) {
+    header{
+        width: 100%;
+        height: 10vh;
+        background-color: rgb(255, 255, 255);
+        display: flex;
+        justify-content: space-between;
+    }
+    h1{
+        display: flex;
+        align-items: center;
+        font-family: 'Dancing Script', cursive;
+        font-weight: 700;
+        margin-left: 2%;
+        color: rgb(0, 0, 0);
+    
+    }
+    ul{
+        display: flex;
+        align-items: center;
+        margin-right: 10%;
+    }
+    ul li {
+        list-style-type: none;
+    }
+    ul li a{
+        text-decoration: none;
+        margin: 0 0 0 30px;
+        font-family: 'Dancing Script', cursive;
+        font-weight: 700;
+        font-size: 1.5em;
+        color: rgb(250, 124, 124);
+        border-bottom: 3px solid rgb(0, 0, 0);
+        padding: 5px;
+    }
+    ul li a:hover{
+        background-color: #000;
+        color: rgb(250, 124, 124);
+        transition: 0.5;
+        border-radius: 20px;
+    }
+    #page{
+        display: flex;
+        flex-direction: column;
+        margin-right: 22.33%;
+    }
+    div.titre {
+        width: fit-content;
+        height: fit-content;
+        background: rgba(255, 255, 255, 0.6);
+        padding: 3%;
+        border: 5px solid #000;
+        margin-left: 20%;
+        margin-top: 20.55%;
+        border-top-left-radius: 50px;
+        border-bottom-right-radius: 50px;
+    }
+    #text{
+        color: #000;
+        font-size: 2em;
+        font-family: 'Dancing Script', cursive;
+        font-weight: 700;
+        
+    }
+    section{
+        background: rgba(255, 255, 255, 0.6);
+        box-sizing: border-box;
+        border: 5px solid rgb(0, 0, 0);
+        width: fit-content;
+        height: fit-content;
+        padding: 2%;
+        margin-top: 14%;
+        margin-left: 10% !important;
+        border-top-left-radius: 50px;
+        border-bottom-right-radius: 50px;
+    }
+    table{
+        border-collapse: collapse;
+        margin-top: 5%;
+        margin-left:1%;
+        margin-bottom: 5%;
+    }
+    table th{
+        background: rgba(0, 0, 0, 0.6);
+        border: 4px solid rgb(255, 255, 255);
+        padding: 8px;
+        color: #fff;
+        font-size: 0.7em;
+    
+    }
+    table td{
+        background: rgba(255, 255, 255, 0.6);
+        border: 4px solid rgb(255, 250, 250);
+        color: #000;
+        text-align: center;
+        padding: 5px;
+        font-size: 0.7em;
+    }
+}
+@media only screen and (max-width: 300px){
+    header{
+        width: 100%;
+        height: 10vh;
+        background-color: rgb(255, 255, 255);
+        display: flex;
+        justify-content: space-between;
+    }
+    h1{
+        display: flex;
+        align-items: center;
+        font-family: 'Dancing Script', cursive;
+        font-weight: 700;
+        margin-left: 2%;
+        color: rgb(0, 0, 0);
+        font-size: 1.1em;
+    
+    }
+    ul{
+        display: flex;
+        align-items: center;
+        margin-right: 30%;
+    }
+    ul li {
+        list-style-type: none;
+    }
+    ul li a{
+        text-decoration: none;
+        margin: 0 0 0 30px;
+        font-family: 'Dancing Script', cursive;
+        font-weight: 700;
+        font-size: 0.7em;
+        color: rgb(250, 124, 124);
+        border-bottom: 3px solid rgb(0, 0, 0);
+        padding: 5px;
+    }
+    ul li a:hover{
+        background-color: #000;
+        color: rgb(250, 124, 124);
+        transition: 0.5;
+        border-radius: 20px;
+    }
+    #page{
+        display: flex;
+        flex-direction: column;
+        margin-right: 22.33%;
+    }
+    div.titre {
+        width: fit-content;
+        height: fit-content;
+        background: rgba(255, 255, 255, 0.6);
+        padding: 10%;
+        border: 5px solid #000;
+        margin-left: 20%;
+        margin-top: 20.55%;
+        border-top-left-radius: 50px;
+        border-bottom-right-radius: 50px;
+    }
+    #text{
+        color: #000;
+        font-size: 1.1em;
+        font-family: 'Dancing Script', cursive;
+        font-weight: 700;
+        
+    }
+    section{
+        background: rgba(255, 255, 255, 0.6);
+        box-sizing: border-box;
+        border: 5px solid rgb(0, 0, 0);
+        width: fit-content;
+        height: fit-content;
+        padding: 2%;
+        margin-top: 14%;
+        margin-left: 10% !important;
+        border-top-left-radius: 50px;
+        border-bottom-right-radius: 50px;
+    }
+    table{
+        border-collapse: collapse;
+        margin-top: 5%;
+        margin-left:10%;
+        margin-bottom: 5%;
+    }
+    table th{
+        background: rgba(0, 0, 0, 0.6);
+        border: 4px solid rgb(255, 255, 255);
+        padding: 8px;
+        color: #fff;
+        font-size: 1em;
+        display: flex;
+        flex-direction: column;
+    
+    }
+    table td{
+        background: rgba(255, 255, 255, 0.6);
+        border: 4px solid rgb(255, 250, 250);
+        color: #000;
+        text-align: center;
+        padding: 5px;
+        font-size: 0.7em;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media only screen and (max-width: 450px){
+    header{
+        width: 100%;
+        height: 10vh;
+        background-color: rgb(255, 255, 255);
+        display: flex;
+        justify-content: space-between;
+    }
+    h1{
+        display: flex;
+        align-items: center;
+        font-family: 'Dancing Script', cursive;
+        font-weight: 700;
+        margin-left: 2%;
+        color: rgb(0, 0, 0);
+        font-size: 1.4em;
+    
+    }
+    ul{
+        display: flex;
+        align-items: center;
+        margin-right: 20%;
+    }
+    ul li {
+        list-style-type: none;
+    }
+    ul li a{
+        text-decoration: none;
+        margin: 0 0 0 30px;
+        font-family: 'Dancing Script', cursive;
+        font-weight: 700;
+        font-size: 1.2em;
+        color: rgb(250, 124, 124);
+        border-bottom: 3px solid rgb(0, 0, 0);
+        padding: 5px;
+    }
+    ul li a:hover{
+        background-color: #000;
+        color: rgb(250, 124, 124);
+        transition: 0.5;
+        border-radius: 20px;
+    }
+    #page{
+        display: flex;
+        flex-direction: column;
+        margin-right: 22.33%;
+    }
+    div.titre {
+        width: fit-content;
+        height: fit-content;
+        background: rgba(255, 255, 255, 0.6);
+        padding: 10%;
+        border: 5px solid #000;
+        margin-left: 20%;
+        margin-top: 20.55%;
+        border-top-left-radius: 50px;
+        border-bottom-right-radius: 50px;
+    }
+    #text{
+        color: #000;
+        font-size: 1.1em;
+        font-family: 'Dancing Script', cursive;
+        font-weight: 700;
+        
+    }
+    section{
+        background: rgba(255, 255, 255, 0.6);
+        box-sizing: border-box;
+        border: 5px solid rgb(0, 0, 0);
+        width: fit-content;
+        height: fit-content;
+        padding: 2%;
+        margin-top: 14%;
+        margin-left: 10% !important;
+        border-top-left-radius: 50px;
+        border-bottom-right-radius: 50px;
+    }
+    table{
+        border-collapse: collapse;
+        margin-top: 5%;
+        margin-left:10%;
+        margin-bottom: 5%;
+    }
+    table th{
+        background: rgba(0, 0, 0, 0.6);
+        border: 4px solid rgb(255, 255, 255);
+        padding: 8px;
+        color: #fff;
+        font-size: 1em;
+        display: flex;
+        flex-direction: column;
+    
+    }
+    table td{
+        background: rgba(255, 255, 255, 0.6);
+        border: 4px solid rgb(255, 250, 250);
+        color: #000;
+        text-align: center;
+        padding: 5px;
+        font-size: 0.7em;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media only screen and (max-width: 750px)and(min-width:500px){
+    header{
+        width: 100%;
+        height: 10vh;
+        background-color: rgb(255, 255, 255);
+        display: flex;
+        justify-content: space-between;
+    }
+   
+    h1{
+        display: flex;
+        align-items: center;
+        font-family: 'Dancing Script', cursive;
+        font-weight: 700;
+        margin-left: 2%;
+        color: rgb(0, 0, 0);
+        font-size: 2em;
+    
+    }
+    ul{
+        display: flex;
+        align-items: center;
+        margin-right: 20%;
+    }
+    ul li {
+        list-style-type: none;
+    }
+    ul li a{
+        text-decoration: none;
+        margin: 0 0 0 30px;
+        font-family: 'Dancing Script', cursive;
+        font-weight: 700;
+        font-size: 2em;
+        color: rgb(250, 124, 124);
+        border-bottom: 3px solid rgb(0, 0, 0);
+        padding: 5px;
+    }
+    ul li a:hover{
+        background-color: #000;
+        color: rgb(250, 124, 124);
+        transition: 0.5;
+        border-radius: 20px;
+    }
+    #page{
+        display: flex;
+        flex-direction: column;
+        margin-right: 22.33%;
+    }
+    div.titre {
+        width: fit-content;
+        height: fit-content;
+        background: rgba(255, 255, 255, 0.6);
+        padding: 10%;
+        border: 5px solid #000;
+        margin-left: 20%;
+        margin-top: 20.55%;
+        border-top-left-radius: 50px;
+        border-bottom-right-radius: 50px;
+    }
+    #text{
+        color: #000;
+        font-size: 2.2em;
+        font-family: 'Dancing Script', cursive;
+        font-weight: 700;
+        
+    }
+    section{
+        background: rgba(255, 255, 255, 0.6);
+        box-sizing: border-box;
+        border: 5px solid rgb(0, 0, 0);
+        width: fit-content;
+        height: fit-content;
+        padding: 2%;
+        margin-top: 14%;
+        margin-left: 13% !important;
+        border-top-left-radius: 50px;
+        border-bottom-right-radius: 50px;
+    }
+    table{
+        border-collapse: collapse;
+        margin-top: 5%;
+        margin-left:18%;
+        margin-bottom: 5%;
+    }
+    table th{
+        background: rgba(0, 0, 0, 0.6);
+        border: 4px solid rgb(255, 255, 255);
+        padding: 8px;
+        color: #fff;
+        font-size: 2em;
+        display: flex;
+        flex-direction: column;
+    
+    }
+    table td{
+        background: rgba(255, 255, 255, 0.6);
+        border: 4px solid rgb(255, 250, 250);
+        color: #000;
+        text-align: center;
+        padding: 5px;
+        font-size: 1.5em;
+        display: flex;
+        flex-direction: column;
+    }
+    section input{
+        font-size: 2em;
+    }
+    select {
+        font-size: 2em;
+    
+    }
+}

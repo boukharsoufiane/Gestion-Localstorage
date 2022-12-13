@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" media="screen and (max-width: 300px)" href="style.css" type="text/css" />
+    <link rel="stylesheet" media="screen and (max-width: 750px)and(min-width:500px)" href="style.css" type="text/css" />
+    <link rel="stylesheet" media="screen and (max-width: 500px)" href="style.css" type="text/css" />
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <h1>Luxior Product</h1>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="product.html">Product</a></li>
+        </ul>
+    </header>
+    <div id="page">
+        <div class="titre" id="text1">
+            <p id="text">GESTION DE STOCK</p>
+        </div>
+        <section id="sec">
+            <form action="" id="form1">
+                <input type="text" id="nom" placeholder="Son Nom">
+                <select id="select1">
+                    <option value="">Select une marque</option>
+                    <option value="Dior">Dior</option>
+                    <option value="Gucci">Gucci</option>
+                    <option value="Oriflame">Oriflame</option>
+                    <option value="Channel">Channel</option>
+                </select>
+                <input type="number" id="prix" placeholder="Son prix">
+                <input type="date" id="Date" placeholder="Sa date de production">
+                <select id="select2">
+                    <option value="">Son type</option>
+                    <option value="Hygiène et toilette">Hygiène et toilette</option>
+                    <option value="Soins esthétiques">Soins esthétiques</option>
+                    <option value="Produits solaires">Produits solaires</option>
+                    <option value="Beauté des mains et des pieds">Beauté des mains et des pieds</option>
+                    <option value="Produits de maquillage">Produits de maquillage</option>
+                    <option value="Entretien capillaires">Entretien capillaires</option>
+                    <option value="Parfums">Parfums</option>
+                </select>
+            </form>
+            <p id="text2">Est en promotion:</p>
+            <form action="" id="form2">
+                <label for="oui"><input type="radio" name="a" value="Oui" id="Oui">Oui</label>
+                <label for="non"><input type="radio" name="a" value="Non" id="Non">Non</label>
+                <div id="button">
+                    <input type="button" onclick="AddProduct()" id="btnAjouter" value="Ajouter">
+                    <button type="button" id="save">Save</button>
+                    <input type="button" value="Editer" onclick="EditRow()" id="btnEdit">
+                    <input type="reset" onclick="rest()" id="btnRest">
+                    <input type="reset" onclick="rest()" id="btnRest">
+
+                    
+                </div>
+            </form>
+        </section>
+    </div>
+    <table id="tbl">
+        
+    </table>
+    <table id="table">
+        <th>Son Nom</th>
+        <th>Sa Marque</th>
+        <th>Son prix(DH)</th>
+        <th>Sa date de production</th>
+        <th>Son type</th>
+        <th>Est en promotion: (oui,non)</th>
+        <th>Action</th>
+    </table>
+    <div id="warning">
+        <img src="img/sign-warning-icon-png-7.png" alt="">
+        <p>Voulez-vous supprimer votre produit?</p>
+        <div class="btn">
+            <button id="deleteRow">OUI</button>
+            <button id="cancelDelete">NON</button>
+        </div>
+    </div>
+    <div id="warning2">
+        <img src="img/sign-warning-icon-png-7.png" alt="">
+        <p id="lettre">Remplez tout l'information de produit</p>
+        <p id="lettres" style="display: none;">Le nom doit pas etre passer 30 lettres</p>
+        <div class="btn">
+            <button id="accept">OK</button>
+        </div>
+    </div>
+
+
+
+    <div id="warning3">
+        <img src="img/sign-warning-icon-png-7.png" alt="">
+        <p id="gestion"></p>
+        <div class="btn">
+            <button id="accept1" onclick="save()">OK</button>
+        </div>
+    </div>
+    <script src="java.js"></script>
+</body>
+
+</html>
