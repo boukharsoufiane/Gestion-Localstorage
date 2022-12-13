@@ -39,8 +39,10 @@ button.onclick = () => {
   let newDate = sonDate.value;
   let newType = sonType.value;
   let newOui;
-  if (PromoOui) {
-    newOui = PromoOui.value;
+  if (PromoOui.checked==true) {
+    newOui = "En promotion";
+  }else{
+    newOui = "-";
   }
 
   // const obj = {
@@ -327,5 +329,21 @@ function modifier() {
       document.getElementById('Non').checked = this.cells[5].innerHTML;
     };
   }
+};
+
+
+function cat(i) {
+  document.getElementById('nom').value = obj[i].sonName;
+  document.getElementById('select1').value = obj[i].sonMarque;
+  document.getElementById('prix').value = obj[i].sonPrix;
+  document.getElementById('Date').value = obj[i].sonDate;
+  document.getElementById('select2').value = obj[i].sonType;
+  obj.splice(i, 1);
+  localStorage.setItem("Gestion", JSON.stringify(obj));
+}
+function supp(i) {
+  obj.splice(i, 1);
+  localStorage.setItem("products", JSON.stringify(obj));
+  document.location.reload();
 }
 
