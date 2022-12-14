@@ -339,7 +339,7 @@ function cat(i) {
   document.getElementById('Date').value = obj[i].sonDate;
   document.getElementById('select2').value = obj[i].sonType;
   obj.splice(i, 1);
-  localStorage.setItem("Gestion", JSON.stringify(obj));
+  localStorage.gestion= JSON.stringify(obj);
 }
 
 
