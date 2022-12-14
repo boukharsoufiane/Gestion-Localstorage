@@ -345,7 +345,7 @@ function cat(i) {
 
 function supp(i) {
   obj.splice(i, 1);
-  localStorage.gestion=JSON.stringify(obj);
+  localStorage.setItem("Gestion",JSON.stringify(obj));
   document.location.reload();
 }
 
