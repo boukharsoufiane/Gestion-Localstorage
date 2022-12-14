@@ -39,9 +39,9 @@ button.onclick = () => {
   let newDate = sonDate.value;
   let newType = sonType.value;
   let newOui;
-  if (PromoOui.checked==true) {
+  if (PromoOui.checked == true) {
     newOui = "En promotion";
-  }else{
+  } else {
     newOui = "-";
   }
 
@@ -287,7 +287,7 @@ if (obj.length != null) {
     const colom7 = document.createElement("td");
     const colom8 = document.createElement("button");
     const colom9 = document.createElement("button");
-    colom8.setAttribute('onclick', "modifier()");
+    colom8.setAttribute('onclick', 'modifier('+i+')');
     colom9.setAttribute('onclick', "supp()");
     colom8.id = 'cel';
     const textBtn = '✎';
@@ -315,20 +315,13 @@ if (obj.length != null) {
   };
 };
 
-function modifier() {
-  let tab1 = document.getElementById('tbl');
-  for (let i = 0; i <= tab1.rows.length; i++) {
-    tab1.rows[i].onclick = function () {
-      rIndex = this.rowIndex;
-      document.getElementById('nom').value = this.cells[0].innerHTML;
-      document.getElementById('select1').value = this.cells[1].innerHTML;
-      document.getElementById('prix').value = this.cells[2].innerHTML;
-      document.getElementById('Date').value = this.cells[3].innerHTML;
-      document.getElementById('select2').value = this.cells[4].innerHTML;
-      document.getElementById('Oui').checked = this.cells[5].innerHTML;
-      document.getElementById('Non').checked = this.cells[5].innerHTML;
-    };
-  }
+function modifier(i) {
+  document.getElementById('nom').value = obj[i].sonName;
+  document.getElementById('select1').value = obj[i].sonMarque;
+  document.getElementById('prix').value = obj[i].sonPrix;
+  document.getElementById('Date').value = value = obj[i].sonDate;
+  document.getElementById('select2').value = obj[i].sonType;
+  document.getElementById('Oui').checked = obj[i].sonPromo;
 };
 
 
@@ -338,14 +331,18 @@ function cat(i) {
   document.getElementById('prix').value = obj[i].sonPrix;
   document.getElementById('Date').value = obj[i].sonDate;
   document.getElementById('select2').value = obj[i].sonType;
+  document.getElementById('select2').value = obj[i].sonPromo;
   obj.splice(i, 1);
-  localStorage.gestion= JSON.stringify(obj);
+  localStorage.setItem("Gestion", JSON.stringify(obj));
+  document.location.reload();
+
+
 }
 
 
 function supp(i) {
   obj.splice(i, 1);
-  localStorage.setItem("Gestion",JSON.stringify(obj));
+  localStorage.setItem("Gestion", JSON.stringify(obj));
   document.location.reload();
 }
 
