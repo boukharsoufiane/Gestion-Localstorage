@@ -325,13 +325,14 @@ function modifier(i) {
 };
 
 
-function cat(i) {
-  document.getElementById('nom').value = obj[i].sonName;
-  document.getElementById('select1').value = obj[i].sonMarque;
-  document.getElementById('prix').value = obj[i].sonPrix;
-  document.getElementById('Date').value = obj[i].sonDate;
-  document.getElementById('select2').value = obj[i].sonType;
-  document.getElementById('select2').value = obj[i].sonPromo;
+function add(i) {
+  let obj = JSON.parse(localStorage.getItem("Gestion"));
+  obj[i].sonName = document.getElementById('nom').value;
+  obj[i].sonMarque = document.getElementById('select1').value;
+  obj[i].sonPrix = document.getElementById('prix').value;
+  obj[i].sonDate = document.getElementById('Date').value;
+  obj[i].sonType = document.getElementById('select2').value;
+  obj[i].sonPromo = document.getElementById('select2').value;
   obj.splice(i, 1);
   localStorage.setItem("Gestion", JSON.stringify(obj));
   document.location.reload();
